@@ -1,9 +1,70 @@
 <!doctype html>
 <html>
-  <head>
-    <title></title>
-  </head>
-  <body>
-    test.cshtml
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>@(model.header ? model.header.title : 'Index') - @(model.header ? model.header.tags[0] : 'code') - Coding Wise Blog</title>
+  <meta name="description" content="Blog posts about C#, TypeScript, JavaScript, ASP.NET Core, Stack Overflow, programming in general">
+  <meta name="keywords" content="c#, typescript, javascript, asp.net, asp.net-core, stack-overflow, codewars, webpack, wpf, coding, wise">
+
+
+  <script src="/static/jquery.min.js"></script>
+  <script src="/static/js/bootstrap.min.js" async></script>
+  <link rel="stylesheet" href="/static/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/static/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="/static/css/index.css" />
+</head>
+
+<body>
+  <nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
+    <a class="navbar-brand" href="/">Coding Wise</a>
+    <ul class="nav navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://brunolm.github.io/" target="_blank">About</a>
+      </li>
+    </ul>
+  </nav>
+
+  <section id="sectionContent" class="container">
+    <main id="main" class="container">
+      @html.block('content')
+    </main>
+  </section>
+
+  <footer id="footer">
+    <div class="container text-center">
+      <p>My name is Bruno Leonardo Michels.</p>
+      <p><a href="https://www.linkedin.com/pulse/my-motivation-developer-fun-bruno-leonardo-michels" target="_blank">I'm a developer for fun!</a></p>
+      <a href="http://stackoverflow.com/users/340760/brunolm" target="_blank" class="flair">
+        <img src="http://stackoverflow.com/users/flair/340760.png" width="208" height="58" alt="profile for BrunoLM at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for BrunoLM at Stack Overflow, Q&amp;A for professional and enthusiast programmers">
+      </a>
+      <a href="https://www.codewars.com/users/brunolm" target="_blank" class="flair">
+        <img alt="codewars" src="https://www.codewars.com/users/brunolm/badges/micro" />
+      </a>
+      <ul class="list-inline social">
+        <li>
+          <a href="http://stackoverflow.com/users/340760/brunolm" target="_blank" class="fa fa-stack-overflow"></a>
+        </li>
+        <li>
+          <a href="https://github.com/brunolm" target="_blank" class="fa fa-github"></a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/brunolm" target="_blank" class="fa fa-linkedin"></a>
+        </li>
+        <li>
+          <a href="http://blog.codingwise.com/" target="_blank" class="fa fa-newspaper-o"></a>
+        </li>
+        <li>
+          <a href="mailto:brunolm7@gmail.com" target="_blank" class="fa fa-envelope-o"></a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+</body>
+
 </html>

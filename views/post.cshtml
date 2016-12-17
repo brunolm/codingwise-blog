@@ -1,0 +1,20 @@
+@html.extend('index', function (model) {
+  @html.block('content', function (model) {
+    <article class="container post">
+      <h1>@model.header.title</h1>
+      <div class="post-meta">
+        <time datetime="@html.isoDate(model.header.date)" title="@html.isoDate(model.header.date)">@html.relativeDate(model.header.date)</time>
+        -
+        @model.header.tags.forEach(function (tag, i) {
+          <span class="tag @(i === 0 ? 'tag-primary' : 'tag-default')">@tag</span>
+        })
+      </div>
+
+      <div class="hidden">
+        @html.json(model.header)
+      </div>
+
+      <section id="content">@html.raw(model.content)</section>
+    </article>
+  })
+})

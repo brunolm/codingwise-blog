@@ -1,7 +1,7 @@
 import * as logger from 'log4js';
-import config from './config';
+import config from '../config';
 
-export default (namespace, level = logger.levels.INFO) => {
+export default (namespace, level = 'INFO') => {
   const log = logger.getLogger(`santander:${namespace}`);
   log.setLevel(config.logLevel || level);
   return log;

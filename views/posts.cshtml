@@ -1,0 +1,23 @@
+@html.extend('index', function (model) {
+  @html.block('content', function (model) {
+    <ul class="list-group row">
+      @model.posts.forEach(function (post) {
+        <li class="list-group-item col-xs-12 col-md-6 post-summary">
+          <h2><a href="@post.link">@post.header.title</a></h2>
+          <div class="post-meta">
+            <time datetime="@html.isoDate(post.header.date)" title="@html.isoDate(post.header.date)">@html.relativeDate(post.header.date)</time>
+            -
+            @post.header.tags.forEach(function (tag, i) {
+              <span class="tag @(i === 0 ? 'tag-primary' : 'tag-default')">@tag</span>
+            })
+          </div>
+          <p>@html.raw(post.content)</p>
+
+          <div class="hidden">
+            @html.json(post.header)
+          </div>
+        </li>
+      })
+    </ul>
+  })
+})
