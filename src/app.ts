@@ -26,6 +26,8 @@ if (log4js.levels.toLevel(config.logLevel).isGreaterThanOrEqualTo(log4js.levels.
 
 app.use('/', routes);
 
+app.use('/_ping', (req, res) => res.send(200));
+
 app.all('/', wrap(async (req, res) => {
   const files = (await getFiles()).reverse();
 
