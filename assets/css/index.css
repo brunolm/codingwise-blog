@@ -15,6 +15,10 @@ img {
   max-width: 100%;
 }
 
+.post {
+  min-height: 50vh;
+}
+
 .post img {
   margin: 10px 0;
 }
