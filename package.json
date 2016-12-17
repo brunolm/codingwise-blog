@@ -24,6 +24,10 @@
     "url": "https://github.com/brunolm/codingwise-blog/issues"
   },
   "homepage": "https://github.com/brunolm/codingwise-blog#readme",
+  "engines": {
+    "node": "7.2.1",
+    "npm": "4.0.5"
+  },
   "dependencies": {
     "chai": "^3.5.0",
     "express": "^4.14.0",
