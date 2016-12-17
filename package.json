@@ -1,0 +1,43 @@
+{
+  "name": "codingwise-blog",
+  "version": "1.0.0",
+  "description": "CodingWise blog. Posts about C#, TypeScript...",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "node --harmony dist/src/index.js",
+    "test": "mocha dist/spec",
+    "build": "tsc",
+    "rebuild": "rimraf dist && npm run build",
+    "postinstall": "npm run rebuild"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brunolm/codingwise-blog.git"
+  },
+  "author": {
+    "email": "brunolm7@gmail.com",
+    "name": "Bruno Leonardo Michels",
+    "url": "http://blog.codingwise.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brunolm/codingwise-blog/issues"
+  },
+  "homepage": "https://github.com/brunolm/codingwise-blog#readme",
+  "dependencies": {
+    "chai": "^3.5.0",
+    "express": "^4.14.0",
+    "log4js": "^1.0.1",
+    "mocha": "^3.2.0",
+    "rimraf": "^2.5.4",
+    "typescript": "^2.1.4",
+    "vash": "^0.12.2"
+  },
+  "devDependencies": {
+    "@types/chai": "^3.4.34",
+    "@types/express": "^4.0.34",
+    "@types/log4js": "0.0.32",
+    "@types/mocha": "^2.2.33",
+    "@types/rimraf": "0.0.28"
+  }
+}
