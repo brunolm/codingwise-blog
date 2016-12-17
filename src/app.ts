@@ -17,7 +17,7 @@ const log = logger('app');
 
 vashApp(app);
 
-if (log4js.levels.toLevel(config.logLevel).isGreaterThanOrEqualTo(log4js.levels.DEBUG)) {
+if (/^(DEBUG|ALL)$/.test(config.logLevel)) {
   app.use((req, res, next) => {
     log.debug(req.url);
     next();
