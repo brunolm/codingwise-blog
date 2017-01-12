@@ -3,6 +3,10 @@ import * as path from 'path';
 
 const app = express.Router();
 
+app.use('*', (req, res) => {
+  return res.redirect('http://blog.codingwise.com/');
+});
+
 app.use('/static', express.static(path.join(__dirname, '../../node_modules/jquery/dist/')));
 app.use('/static', express.static(path.join(__dirname, '../../node_modules/bootstrap/dist/')));
 app.use('/static', express.static(path.join(__dirname, '../../node_modules/font-awesome/')));
